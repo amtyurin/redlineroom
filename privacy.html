@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RedlineRoom — Privacy Policy</title>
+<meta name="description" content="RedlineRoom privacy policy: no account, no tracking. Only a single cropped image of each markup you choose to transcribe ever leaves your device.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1d1d1f;
+    --muted: #6e6e73;
+    --rule: #e5e5ea;
+    --accent: #0a6cff;
+    --card: #f5f5f7;
+    --maxw: 44rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --fg: #f5f5f7;
+      --muted: #a1a1a6;
+      --rule: #2a2a2c;
+      --accent: #4c9dff;
+      --card: #1c1c1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 0 1.25rem;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 3rem 0 4rem; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+  .eyebrow { font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 0.4rem; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.25rem; margin: 2.4rem 0 0.6rem; letter-spacing: -0.01em; }
+  p, li { color: var(--fg); }
+  .muted { color: var(--muted); }
+  .updated { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lede {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    margin: 1.75rem 0;
+    font-size: 1.02rem;
+  }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0.35rem 0; }
+  code { background: var(--card); padding: 0.1em 0.4em; border-radius: 6px; font-size: 0.9em; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">RedlineRoom</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 1, 2026</p>
+  </header>
+
+  <p>RedlineRoom (&ldquo;the app&rdquo;) is made by cpmtek (&ldquo;we,&rdquo; &ldquo;us&rdquo;).
+  This policy explains what the app does and does not do with your information. It is
+  written to be read, not to be hidden behind legalese.</p>
+
+  <div class="lede">
+    <strong>The short version.</strong> RedlineRoom has <strong>no account and no login</strong>.
+    The only thing that ever leaves your device is a <strong>single cropped image of one markup
+    you choose to transcribe</strong>, plus a random device identifier that is not tied to who
+    you are. We do not sell data, run ads, or track you. Any photo you attach to an item stays on
+    your device and is included only in exports you choose to share.
+  </div>
+
+  <h2>What we send off your device, and to whom</h2>
+  <p>When &mdash; and only when &mdash; you tap <strong>Transcribe</strong> on a markup, the app sends:</p>
+  <ul>
+    <li><strong>A single cropped image of that one markup region</strong> (the loop and its
+      handwritten note) to our transcription service at <code>redlineroom-api.cpmtek.com</code>,
+      which forwards it to <strong>Anthropic&rsquo;s Claude API</strong> (model
+      <code>claude-opus-4-8</code>) to convert your handwriting into text.</li>
+    <li><strong>A random device identifier</strong> (a UUID generated on your device and stored
+      in the iOS Keychain) used only to count your free transcriptions and to verify an active
+      subscription.</li>
+  </ul>
+  <p>That is the entire outbound data flow.</p>
+
+  <h2>What we never send</h2>
+  <ul>
+    <li>Your <strong>full drawing or PDF</strong> &mdash; only the small cropped region of the one markup.</li>
+    <li>Your <strong>project names, file names, or notes</strong> other than the markup being transcribed.</li>
+    <li>Your <strong>location</strong>, <strong>name</strong>, <strong>email</strong>, or any
+      <strong>account information</strong> &mdash; there is no account.</li>
+    <li>Any <strong>contacts, microphone, or advertising identifiers</strong>.</li>
+  </ul>
+
+  <h2>Photos you attach (optional)</h2>
+  <p>You can optionally attach a photo of a condition to a punch item, using your camera or your
+  photo library. <strong>These photos stay on your device.</strong> They are included only in a PDF
+  you choose to export and share, and are <strong>never sent to our transcription service or to
+  Anthropic.</strong> The camera or photo library is accessed only at the moment you add a photo.</p>
+
+  <h2>Retention</h2>
+  <ul>
+    <li>The cropped image is used to produce text and is <strong>not retained on our servers</strong>
+      after the response is returned.</li>
+    <li>Anthropic processes the image under its <strong>commercial API terms</strong> to generate the
+      text and <strong>does not use API inputs or outputs to train its models</strong>. See
+      Anthropic&rsquo;s API terms:
+      <a href="https://www.anthropic.com/legal/commercial-terms">anthropic.com/legal/commercial-terms</a>.</li>
+    <li>The random device identifier is stored only to enforce the free-transcription cap and
+      subscription status. It is not linked to your identity and is not used to track you across
+      apps or websites.</li>
+  </ul>
+
+  <h2>Subscriptions and payments</h2>
+  <p>Subscriptions are sold and processed by <strong>Apple</strong> through the App Store. We never
+  receive or store your payment details. Purchase and restore are handled by Apple&rsquo;s StoreKit;
+  we only receive Apple&rsquo;s signed confirmation that a subscription is active, to unlock unlimited
+  transcriptions.</p>
+
+  <h2>Tracking</h2>
+  <p>We do <strong>not</strong> track you. The app contains no advertising SDK, no analytics SDK,
+  and no third-party trackers. It does not present an App Tracking Transparency prompt because there
+  is nothing to track. <code>NSPrivacyTracking</code> is <code>false</code> and there are no tracking
+  domains.</p>
+
+  <h2>Children</h2>
+  <p>RedlineRoom is a professional tool and is <strong>not directed to children under 13</strong>.
+  We do not knowingly collect information from children.</p>
+
+  <h2>Your choices</h2>
+  <p>Because there is no account and we retain no cropped images, there is no personal profile to
+  access or delete. To stop all data leaving your device, simply do not use the Transcribe feature
+  &mdash; drawing, the punch list, and PDF/CSV export all work fully on-device with no network use.
+  To manage or cancel a subscription, use <strong>Settings &rarr; Apple Account &rarr; Subscriptions</strong>
+  on your device.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we change this policy we will update the date above and post the new version at this URL
+  before the change takes effect.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:amtyurin@gmail.com">amtyurin@gmail.com</a>.</p>
+
+  <footer>
+    &copy; 2026 cpmtek &middot; <a href="support.html">Support</a>
+  </footer>
+</div>
+</body>
+</html>
