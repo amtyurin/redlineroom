@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RedlineRoom — Privacy Policy</title>
-<meta name="description" content="RedlineRoom privacy policy: no account, no tracking. Only a single cropped image of each markup you choose to transcribe ever leaves your device.">
+<meta name="description" content="RedlineRoom privacy policy: no account, no tracking. Only cropped images of a markup you transcribe — never the whole sheet — ever leave your device.">
 <style>
   :root {
     --bg: #ffffff;
@@ -63,7 +63,7 @@
   <header>
     <p class="eyebrow">RedlineRoom</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 1, 2026</p>
+    <p class="updated">Last updated: July 10, 2026</p>
   </header>
 
   <p>RedlineRoom (&ldquo;the app&rdquo;) is made by cpmtek (&ldquo;we,&rdquo; &ldquo;us&rdquo;).
@@ -72,28 +72,40 @@
 
   <div class="lede">
     <strong>The short version.</strong> RedlineRoom has <strong>no account and no login</strong>.
-    The only thing that ever leaves your device is a <strong>single cropped image of one markup
-    you choose to transcribe</strong>, plus a random device identifier that is not tied to who
-    you are. We do not sell data, run ads, or track you. Any photo you attach to an item stays on
-    your device and is included only in exports you choose to share.
+    The only things that ever leave your device are <strong>cropped images of a markup you
+    transcribe</strong> (the markup itself plus a small area of the sheet around it &mdash; never
+    the whole sheet), a random device identifier that is not tied to who you are, and &mdash; if
+    you subscribe &mdash; Apple&rsquo;s signed confirmation of your subscription. We do not sell
+    data, run ads, or track you. Any photo you attach to an item stays on your device and is
+    included only in exports you choose to share.
   </div>
 
   <h2>What we send off your device, and to whom</h2>
-  <p>When &mdash; and only when &mdash; you tap <strong>Transcribe</strong> on a markup, the app sends:</p>
+  <p>When &mdash; and only when &mdash; you transcribe a markup (circling a detail and writing a
+  note next to it sends that markup automatically), the app sends:</p>
   <ul>
-    <li><strong>A single cropped image of that one markup region</strong> (the loop and its
-      handwritten note) to our transcription service at <code>redlineroom-api.cpmtek.com</code>,
-      which forwards it to <strong>Anthropic&rsquo;s Claude API</strong> (model
-      <code>claude-opus-4-8</code>) to convert your handwriting into text.</li>
+    <li><strong>A cropped image of that one markup region</strong> (the loop and its handwritten
+      note), together with <strong>a second, slightly wider crop of the sheet area immediately
+      around it</strong> that helps the AI read your note in context. The surrounding crop is
+      bounded in the app itself: if it would cover more than half the page, it is not sent at
+      all &mdash; <strong>neither image is ever the whole sheet</strong>. Both go to our
+      transcription service at <code>redlineroom-api.cpmtek.com</code>, which forwards them to
+      <strong>Anthropic&rsquo;s Claude API</strong> (model <code>claude-opus-4-8</code>) to
+      convert your handwriting into text.</li>
     <li><strong>A random device identifier</strong> (a UUID generated on your device and stored
       in the iOS Keychain) used only to count your free transcriptions and to verify an active
       subscription.</li>
   </ul>
+  <p>If you subscribe, the app also sends <strong>your device identifier together with
+  Apple&rsquo;s signed subscription confirmation</strong> to our service &mdash; at purchase, at
+  app launch, and when connectivity returns &mdash; so the server knows your device is Unlimited.
+  This confirmation contains no name, email, or payment details.</p>
   <p>That is the entire outbound data flow.</p>
 
   <h2>What we never send</h2>
   <ul>
-    <li>Your <strong>full drawing or PDF</strong> &mdash; only the small cropped region of the one markup.</li>
+    <li>Your <strong>full drawing or PDF</strong> &mdash; only the cropped markup region and its
+      bounded immediate surroundings (never more than half of one page).</li>
     <li>Your <strong>project names, file names, or notes</strong> other than the markup being transcribed.</li>
     <li>Your <strong>location</strong>, <strong>name</strong>, <strong>email</strong>, or any
       <strong>account information</strong> &mdash; there is no account.</li>
@@ -108,7 +120,7 @@
 
   <h2>Retention</h2>
   <ul>
-    <li>The cropped image is used to produce text and is <strong>not retained on our servers</strong>
+    <li>The cropped images are used to produce text and are <strong>not retained on our servers</strong>
       after the response is returned.</li>
     <li>Anthropic processes the image under its <strong>commercial API terms</strong> to generate the
       text and <strong>does not use API inputs or outputs to train its models</strong>. See
@@ -137,7 +149,7 @@
 
   <h2>Your choices</h2>
   <p>Because there is no account and we retain no cropped images, there is no personal profile to
-  access or delete. To stop all data leaving your device, simply do not use the Transcribe feature
+  access or delete. If you never transcribe and never subscribe, nothing leaves your device
   &mdash; drawing, the punch list, and PDF/CSV export all work fully on-device with no network use.
   To manage or cancel a subscription, use <strong>Settings &rarr; Apple Account &rarr; Subscriptions</strong>
   on your device.</p>
